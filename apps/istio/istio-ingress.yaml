@@ -6,11 +6,12 @@ metadata:
 spec:
   project: k3s-setup
   source:
-    repoURL: https://istio-release.github.io/istio-charts
+    repoURL: https://github.com/charti/k3s-setup.git
+    targetRevision: main
+    path: charts/istio/gateway-1.25.1.tgz
     chart: gateway
-    targetRevision: 1.25.1
     helm:
-      releaseName: istio-ingress
+      releaseName: gateway
       valueFiles:
       - ../../helm-values/istio/ingress-values.yaml
   destination:

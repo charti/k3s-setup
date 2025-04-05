@@ -7,7 +7,6 @@ spec:
   description: Project for managing K3s setup components
   sourceRepos:
   - https://github.com/charti/k3s-setup.git
-  - https://istio-release.github.io/istio-charts
   destinations:
   - namespace: '*'
     server: https://kubernetes.default.svc

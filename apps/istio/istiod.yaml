@@ -6,9 +6,10 @@ metadata:
 spec:
   project: k3s-setup
   source:
-    repoURL: https://istio-release.github.io/istio-charts
+    repoURL: https://github.com/charti/k3s-setup.git
+    targetRevision: main
+    path: charts/istio/istiod-1.25.1.tgz
     chart: istiod
-    targetRevision: 1.25.1
     helm:
       releaseName: istiod
       valueFiles:
