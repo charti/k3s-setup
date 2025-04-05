@@ -8,12 +8,11 @@ spec:
   source:
     repoURL: https://github.com/charti/k3s-setup.git
     targetRevision: main
-    path: charts/istio/istiod-1.25.1.tgz
-    chart: istiod
+    path: charts/istio/istiod
     helm:
       releaseName: istiod
       valueFiles:
-      - ../../helm-values/istio/istiod-values.yaml
+      - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system

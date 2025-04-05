@@ -1,5 +1,0 @@
-global:
-  istioNamespace: istio-system
-
-pilot:
-  autoscaleEnabled: true
