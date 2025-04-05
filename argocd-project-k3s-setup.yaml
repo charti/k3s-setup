@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: k3s-setup
+  namespace: argocd
+spec:
+  description: Project for managing K3s setup components
+  sourceRepos:
+  - https://github.com/charti/k3s-setup.git
+  - https://istio-release.github.io/istio-charts
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
